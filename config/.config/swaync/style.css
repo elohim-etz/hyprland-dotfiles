@@ -1,0 +1,315 @@
+/**
+ * SwayNC - Sway Notification Center CSS
+ * Color scheme based on Catppuccin Macchiato
+ */
+
+/* Color Definitions */
+@define-color background #1e1e2e;
+@define-color foreground #cdd6f4;
+@define-color select    #585b70;
+
+/* Accent Colors */
+@define-color pink      #f5c2e7;
+@define-color purple    #cba6f7;
+@define-color red       #f38ba8;
+@define-color orange    #fab387;
+@define-color yellow    #f9e2af;
+@define-color green     #a6e3a1;
+@define-color blue      #89b4fa;
+@define-color gray      #45475a;
+
+/* MPRIS Specific Colors */
+@define-color mpris-album-art-overlay rgba(0, 0, 0, 0.55);
+@define-color mpris-button-hover      rgba(0, 0, 0, 0.5);
+
+/* Base Styles */
+* {
+    outline: none;
+    font-family: "Adwaita Sans";
+    font-size: 18px;
+    text-shadow: none;
+    color: @foreground;
+    background-color: transparent;
+    background: transparent;
+}
+
+/* Control Center */
+.control-center {
+    background-color: alpha(@background, 0.8);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.65);
+    padding: 5px;
+    border-radius: 15px;
+}
+
+/* Notification Styles */
+.notification {
+    background-color: alpha(@background, 0.8);
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-right: 5px;
+    min-height: 100px;
+}
+
+.notification > *:last-child > * {
+    margin: 5px;
+}
+
+.notification-content {
+    padding: 15px 10px 10px 20px;
+}
+
+/* Notification Text Sizes */
+.summary {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.time {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.body {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Notification Priority Levels */
+.notification.critical {
+    background-color: alpha(@red, 0.5);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.65);
+}
+
+.notification.low,
+.notification.normal {
+    background-color: alpha(@background, 0.5);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.65);
+}
+
+/* Notification Actions */
+.notification-action > button {
+    padding: 0;
+    margin: 0;
+}
+
+.notification-action > label {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+/* Close Button */
+.close-button {
+    background-color: alpha(@gray, 0.8);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.35);
+    border-radius: 999px;
+    min-width: 24px;
+    min-height: 24px;
+}
+
+.close-button:hover {
+    background-color: alpha(@red, 0.8);
+}
+
+/* Notification Groups */
+.notification-group-header,
+.notification-group-icon {
+    font-size: 0.9rem;
+}
+
+.notification-group-collapse-button,
+.notification-group-close-all-button {
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.35);
+    background-color: @gray;
+    border-radius: 999px;
+    min-width: 24px;
+    min-height: 24px;
+}
+
+.notification-group-collapse-button:hover {
+    background-color: alpha(@blue, 0.8);
+}
+
+.notification-group-close-all-button:hover {
+    background-color: alpha(@red, 0.8);
+}
+
+/* Slider Styles */
+trough highlight {
+    background: @blue;
+}
+
+slider {
+    background-color: @foreground;
+}
+
+scale trough {
+    margin: 0 1rem;
+    background-color: @gray;
+    min-height: 8px;
+    min-width: 70px;
+    border-radius: 4px;
+}
+
+tooltip {
+    background-color: @gray;
+    border-radius: 6px;
+    padding: 4px 8px;
+}
+
+/*** Widget Styles ***/
+
+/* Buttons Widget */
+.widget-buttons-grid {
+    font-size: 1rem;
+    padding: 20px 20px 10px;
+    margin: 0;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+    background: @gray;
+    box-shadow: 0 0 10px alpha(@background, 0.8);
+    border-radius: 12px;
+    min-width: 60px;
+    min-height: 30px;
+    padding: 6px;
+    margin: 0 3px;
+    transition: all 0.3s ease;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+    background: @select;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked {
+    background: @blue;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked:hover {
+    background: alpha(@blue, 0.8);
+}
+
+/* MPRIS Widget */
+.widget-mpris .widget-mpris-player {
+    padding: 16px;
+    margin: 16px 20px;
+    background-color: @mpris-album-art-overlay;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
+}
+
+.widget-mpris .widget-mpris-player .widget-mpris-album-art {
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
+}
+
+.widget-mpris .widget-mpris-player .widget-mpris-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 8px 8px;
+}
+
+.widget-mpris .widget-mpris-player .widget-mpris-subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.widget-mpris .widget-mpris-player > box > button {
+    border-radius: 999px;
+    min-width: 32px;
+    min-height: 32px;
+}
+
+.widget-mpris .widget-mpris-player > box > button:hover {
+    background-color: @mpris-button-hover;
+}
+
+.widget-mpris > box > button:hover {
+    background: alpha(@select, 0.6);
+}
+
+/* Volume Widget */
+.widget-volume {
+    padding: 6px 5px 5px;
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.widget-volume > box > button {
+    border: none;
+    border-radius: 999px;
+    min-width: 32px;
+    min-height: 32px;
+}
+
+.per-app-volume {
+    padding: 4px 8px 8px;
+    margin: 0 8px 8px;
+}
+
+/* Backlight Widget */
+.widget-backlight {
+    padding: 0 0 3px 16px;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* DND Widget */
+.widget-dnd {
+    font-weight: bold;
+    margin: 0;
+    padding: 20px 15px 15px;
+}
+
+.widget-dnd > switch {
+    font-size: initial;
+    border-radius: 100px;
+    background: @yellow;
+    border: none;
+    box-shadow: none;
+    padding: 3px;
+    min-width: 40px;
+    min-height: 24px;
+}
+
+.widget-dnd > switch:checked {
+    background: @green;
+}
+
+.widget-dnd > switch slider {
+    background: @background;
+    border-radius: 12px;
+    min-width: 18px;
+    min-height: 18px;
+}
+
+/* Title Widget */
+.widget-title {
+    padding: 15px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.widget-title > label {
+    font-size: 1.5rem;
+}
+
+.widget-title > button {
+    padding: 0 6px;
+    margin: 0;
+    background: @red;
+    border: none;
+    box-shadow: none;
+    border-radius: 100px;
+    min-width: 24px;
+    min-height: 24px;
+    transition: all 0.3s ease;
+}
+
+.widget-title > button:hover {
+    background: alpha(@red, 0.8);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.65);
+}
+
+.image {
+  padding-right: 0.5rem;
+}

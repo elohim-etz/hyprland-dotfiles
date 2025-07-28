@@ -1,0 +1,50 @@
+btop                                          # Resource monitor with a modern UI and system stats
+fastfetch                                     # Fast system info fetcher similar to neofetch, but faster
+
+unzip                                         # Utility for extracting .zip files
+fzf                                           # Fuzzy file finder for terminal
+bat                                           # cat clone with syntax highlighting and Git integration
+ripgrep                                       # Fast search tool (like grep) using Rust
+fd                                            # Simple, fast alternative to find
+stow                                          # Symlink manager for dotfiles (GNU Stow)
+
+zsh                                           # Powerful and customizable shell
+
+hyprland                                      # Dynamic tiling Wayland compositor
+hyprlock                                      # Lock screen utility for Hyprland
+swww                                          # Wallpaper daemon for Wayland
+grim                                          # Screenshot utility for Wayland
+slurp                                         # Region selector for screenshots (used with grim)
+swaync                                        # Notification daemon for Wayland
+waybar                                        # Highly customizable status bar for Wayland
+rofi                                          # Application launcher and window switcher
+xdg-desktop-portal-hyprland                   # XDG desktop portal backend for Hyprland
+xdg-desktop-portal-gtk                        # GTK integration for XDG portals
+
+brightnessctl                                 # Adjust screen brightness via command line
+network-manager-applet                        # Network management GUI applet
+bluez                                         # Bluetooth protocol stack for Linux
+bluez-utils                                   # Utilities for Bluetooth (like `bluetoothctl`)
+blueman                                       # GTK Bluetooth manager
+pipewire                                      # Audio/video server to replace PulseAudio & JACK
+wireplumber                                   # Session manager for PipeWire
+pavucontrol                                   # GTK audio volume control for PulseAudio/PipeWire
+kitty                                         # Fast, GPU-based terminal emulator
+
+thunar                                        # Lightweight file manager for Xfce
+satty                                         # Modern Screenshot Annotation
+
+sddm                                          # Simple display/login manager for X11/Wayland
+qt5ct                                         # Customize Qt5 application appearance
+qt6ct                                         # Customize Qt6 application appearance
+starship                                      # Minimal, fast, and customizable shell prompt
+
+code                                          # Visual Studio Code IDE
+firefox                                       # Browser
+
+nwg-look                                      # GTK theme and cursor switcher for Wayland (especially Hyprland)
+adw-gtk-theme                                 # Libadwaita-inspired GTK theme
+cliphist                                      # Clipboard history manager for Wayland (wlroots)
+noto-fonts-cjk                                # Noto fonts with support for CJK (Chinese, Japanese etc)
+tela-circle-icon-theme-dracula                # Tela circle icon theme
+cantarell-fonts                               # Cantarell font

@@ -1,0 +1,185 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": [
+        "hyprland/workspaces",
+        "memory",
+        "temperature",
+        "network"
+    ],
+    "modules-center": [
+        "wlr/taskbar",
+        "custom/media"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "backlight",
+        "clock",
+        "tray",
+        "battery",
+        "custom/power"
+    ],
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "sort-by-name": true,
+        "format": " {icon} ",
+        "format-icons": {
+            "default": "",
+        },
+    },
+    "tray": {
+        "icon-size": 19,
+        "spacing": 10
+    },
+    "custom/media": {
+        "format": "  {}",
+        "escape": true,
+        "interval": 1,
+        "tooltip": false,
+        "exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
+        "on-click-right": "playerctl next",
+        "on-click": "playerctl play-pause",
+        "on-click-middle": "playerctl previous",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        "max-length": 60
+    },
+    "clock": {
+        "format": "<span color='#C0C0C0'>{:%I:%M %p}</span>",
+        "rotate": 0,
+        "on-click": "swaync-client -t",
+        "tooltip-format": "<span>{calendar}</span>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "on-scroll": 1,
+            // "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#F5F5F5'><b>{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b>{}</b></span>"
+            }
+        }
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            // "warning": 30,
+            // "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "rotate": 0,
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ]
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                " "
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/lock": {
+        "tooltip": false,
+        "on-click": "sh -c '(sleep 0.5s; swaylock --grace 0)' & disown",
+        "format": "",
+    },
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "wlogout -b 5",
+        "format": "襤"
+    },
+    "mpris": {
+        "format": " {player_icon} {dynamic}",
+        "format-paused": " {status_icon} <i>{dynamic}</i>",
+        "rotate": 0,
+        "interval": 1,
+        "max-length": 85,
+        "player-icons": {
+            "default": "▶",
+            "mpv": "🎵"
+        },
+        "status-icons": {
+            "paused": "⏸"
+        }
+    },
+    "network": {
+        "tooltip": true,
+        "rotate": 0,
+        "interval": 2,
+        "format-wifi": "<span foreground='#f38ba8'></span> {bandwidthDownBytes}  <span foreground='#b4befe'></span> {bandwidthUpBytes}",
+        "format-ethernet": "󰈁 ",
+        "format-linked": "󰈁 {ifname} (No IP)",
+        "format-disconnected": "󰤮 ",
+        "format-alt": " ",
+        "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+        "tooltip-format-disconnected": "Disconnected"
+    },
+    "memory": {
+        "states": {
+            "c": 90,
+            "h": 60,
+            "m": 30
+        },
+        "interval": 30,
+        "format": "\udb83\udf86 {used}GB",
+        "rotate": 0,
+        "format-m": "\udb83\udf85 {used}GB",
+        "format-h": "\udb81\udcc5 {used}GB",
+        "format-c": "\uf421 {used}GB",
+        "format-alt": "\udb83\udf86 {percentage}%",
+        "max-length": 10,
+        "tooltip": true,
+        //"tooltip-format": "\udb83\udf86 {percentage}%\n\ue266 {used:0.1f}GB/{total:0.1f}GB",
+        "tooltip-format": "\udb83\udf86 Memory usage: {percentage}%\n\ue266 Used: {used:0.2f}GB / {total:0.2f}GB\n\uf85a Available: {avail:0.2f}GB\n\uf233 Swap used: {swapUsed:0.2f}GB / {swapTotal:0.2f}GB ({swapPercentage}%)"
+    },
+    "temperature": {
+        "thermal-zone": 9,
+        "hwmon-path": "/sys/class/thermal/thermal_zone9:",
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C ",
+        "format": " {temperatureC}°C"
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 19,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close"
+    }
+}
