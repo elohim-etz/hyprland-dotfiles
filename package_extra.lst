@@ -1,14 +1,16 @@
-pokemon-colorscripts-git     # Terminal color scripts with Pokémon ASCII art
+wlogout                     
 
-wlogout                      # Wayland-compatible logout screen with power options
+bibata-cursor-theme-bin      
+spicetify-cli               
 
-bibata-cursor-theme-bin      # Smooth and modern Bibata cursor theme (binary package)
-spicetify-cli                # Command-line tool to customize the Spotify desktop client
+spotify                    
+brave-bin                   
+zen-browser-bin
 
-spotify                      # Official Spotify client for music streaming
-brave-bin                    # Brave web browser (binary package for faster install)
+sddm-sugar-candy-git        
 
-sddm-sugar-candy-git         # Eye-candy SDDM theme with animations and blur
+ttf-jetbrains-mono-nerd      
+catppuccin-gtk-theme-mocha
 
-ttf-jetbrains-mono-nerd      # JetBrains Mono font patched with Nerd Fonts icons
-catppuccin-gtk-theme-mocha   # Mocha theme for GTK
+eza
+less

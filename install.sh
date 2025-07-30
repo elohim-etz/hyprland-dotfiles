@@ -93,15 +93,15 @@ echo "ℹ️ Please log out and log back in for Zsh to take effect."
 
 # ──────────────────────────────────────────────────────────────
 # ⛓️ Make Scripts Executable
-find "$SCRIPT_DIR/scripts" -type f \( -name "*.sh" -o -exec grep -q "^#!" {} \; \) -exec chmod +x {} \;
-find "$SCRIPT_DIR/bin/.local/bin/MyScripts" -type f \( -name "*.sh" -o -exec grep -q "^#!" {} \; \) -exec chmod +x {} \;
+chmod +x /home/elohim/dotfiles/local/.local/bin/MyScripts/*
+chmod +x ./scripts/*
 
 # ──────────────────────────────────────────────────────────────
 # 🖼️ Download Wallpapers
 echo -e "\n🖼️ Downloading wallpapers..."
 
 if [[ ! -d "$WALLPAPER_DIR" ]]; then
-    git clone --depth=1 https://github.com/elohim-etz/Wallpapers.git "$WALLPAPER_DIR"
+    git clone --depth=1 https://github.com/elohim-etz/Walls.git "$WALLPAPER_DIR"
 else
     git -C "$WALLPAPER_DIR" pull --ff-only
 fi

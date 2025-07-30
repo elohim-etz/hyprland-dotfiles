@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-wallpapers_dir="$HOME/Pictures/Wallpapers"
+wallpapers_dir="$HOME/.local/share/wallpapers"
 
 selected_wallpaper=$(for a in "$wallpapers_dir"/*; do
     echo -en "$(basename "${a%.*}")\0icon\x1f$a\n"

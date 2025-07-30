@@ -99,7 +99,7 @@ export BAT_THEME="base16"
 alias bat='bat --paging=never'
 
 # Setup zoxide (better than cd)
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
 
 # if [[ -n $DISPLAY ]]; then
 #     (pokemon-colorscripts --no-title -s -r &)
@@ -109,3 +109,5 @@ eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
 export PATH="$HOME/.local/bin:$PATH"
+
+export GPG_TTY=$(tty)

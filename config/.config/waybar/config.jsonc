@@ -36,7 +36,7 @@
         "escape": true,
         "interval": 1,
         "tooltip": false,
-        "exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
+        "exec": "playerctl metadata --format='{{ artist }} - {{ title }}' 2>/dev/null || echo ''",
         "on-click-right": "playerctl next",
         "on-click": "playerctl play-pause",
         "on-click-middle": "playerctl previous",
