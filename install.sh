@@ -75,6 +75,8 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]; then
     exit 1
 fi
 
+rm -rf ~/.config/hypr/*
+
 stow --adopt -t ~ zsh
 stow --adopt -t ~ tmux
 stow --adopt -t ~ hypr
