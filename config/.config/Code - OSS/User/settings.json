@@ -21,6 +21,8 @@
     "workbench.iconTheme": "catppuccin-mocha",
     "explorer.compactFolders": false,
     "editor.wordWrap": "on",
-    "editor.minimap.maxColumn": 60
+    "editor.minimap.maxColumn": 60,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
   

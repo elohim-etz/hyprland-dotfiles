@@ -1,38 +1,6 @@
-config/.config/Code - OSS/Cache/
-config/.config/Code - OSS/CachedData/
-config/.config/Code - OSS/CachedExtensionVSIXs/
-config/.config/Code - OSS/CachedProfilesData/
-config/.config/Code - OSS/Code Cache/
-config/.config/Code - OSS/Cookies
-config/.config/Code - OSS/Cookies-journal
-config/.config/Code - OSS/Crashpad/
-config/.config/Code - OSS/DIPS
-config/.config/Code - OSS/DIPS-shm
-config/.config/Code - OSS/DIPS-wal
-config/.config/Code - OSS/DawnGraphiteCache/
-config/.config/Code - OSS/DawnWebGPUCache/
-config/.config/Code - OSS/Dictionaries/
-config/.config/Code - OSS/GPUCache/
-config/.config/Code - OSS/Local Storage/
-config/.config/Code - OSS/Network Persistent State
-config/.config/Code - OSS/Preferences
-config/.config/Code - OSS/Service Worker/
-config/.config/Code - OSS/Session Storage/
-config/.config/Code - OSS/Shared Dictionary/
-config/.config/Code - OSS/SharedStorage
-config/.config/Code - OSS/SharedStorage-wal
-config/.config/Code - OSS/TransportSecurity
-config/.config/Code - OSS/Trust Tokens
-config/.config/Code - OSS/Trust Tokens-journal
-config/.config/Code - OSS/User/History/
-config/.config/Code - OSS/User/globalStorage/
-config/.config/Code - OSS/User/keybindings.json
-config/.config/Code - OSS/User/workspaceStorage/
-config/.config/Code - OSS/WebStorage/
-config/.config/Code - OSS/code.lock
-config/.config/Code - OSS/languagepacks.json
-config/.config/Code - OSS/logs/
-config/.config/Code - OSS/machineid
-config/.config/Code - OSS/.org.chromium.Chromium.KsZMBy
-config/.config/Code - OSS/.org.chromium.Chromium.U2Mfj4
-config/.config/Code - OSS/.org.chromium.Chromium.YJxonm
+config/.config/Code - OSS/*
+!config/.config/Code - OSS/User/settings.json
+
+config/.config/gtk-3.0/bookmarks
+
+nvim/.config/nvim/lazy-lock.json
